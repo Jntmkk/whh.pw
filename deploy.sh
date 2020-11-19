@@ -1,0 +1,1 @@
+export FileName=${finalName}.${packaging}
