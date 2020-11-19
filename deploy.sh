@@ -11,6 +11,6 @@ if [ -n "$h" ]; then
   else
     echo "did not run service"
 fi
-nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar /var/lib/jenkins/workspace/whh.pw/target/"${filename}".jar --spring.pofiles.active=prod >/var/log/main.log 2>&1 &
+nohup /usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar /var/lib/jenkins/workspace/whh.pw/target/"${filename}".jar --spring.profiles.active=prod >/var/log/main.log 2>&1 &
 echo "deploy done"
 echo $! >service.pid
