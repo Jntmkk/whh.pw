@@ -1,7 +1,7 @@
 export groupId=$(mvn org.apache.maven.plugins:maven-help-plugin:evaluate -Dexpression=project.groupId -q -DforceStdout)
 export artifactId=$(mvn org.apache.maven.plugins:maven-help-plugin:evaluate -Dexpression=project.artifactId -q -DforceStdout)
 export version=$(mvn org.apache.maven.plugins:maven-help-plugin:evaluate -Dexpression=project.version -q -DforceStdout)
-export filename="${artifactId}"-"${groupId}"-"${version}"
+export filename="${artifactId}"-"${version}"
 echo "filename is : " "$filename"
 h=$(ps -aux | grep -v grep | grep "${filename}" | awk '{print $2}')
 if [ -n "$h" ]; then
