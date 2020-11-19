@@ -1,0 +1,10 @@
+server:
+  port: 8888
+web:
+  upload-path: D:/user_file/
+spring:
+  profiles:
+    active: dev
+  web:
+    resources:
+      static-locations: file:${web.upload-path},classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/

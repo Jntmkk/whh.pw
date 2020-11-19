@@ -1,0 +1,4 @@
+web:
+  upload-path: D:/user_file/
+server:
+  port: 8989

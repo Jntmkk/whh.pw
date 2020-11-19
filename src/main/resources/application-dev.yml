@@ -1,0 +1,16 @@
+web:
+  upload-path: D:/user_file/
+server:
+  port: 8989
+spring:
+  thymeleaf:
+    cache: false
+  devtools:
+    restart:
+      enabled: true
+  web:
+    resources:
+      static-locations: file:${web.upload-path},classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/
+logging:
+  level:
+    root: info
