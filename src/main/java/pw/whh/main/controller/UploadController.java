@@ -34,8 +34,11 @@ public class UploadController {
         }
         // 对上传的文件重命名，避免文件重名
         String oldName = uploadFile.getOriginalFilename();
-        String newName = UUID.randomUUID().toString()
-                + oldName.substring(oldName.lastIndexOf("."), oldName.length());
+        int i = oldName.lastIndexOf(".");
+        String suffix = "";
+        if (i != -1)
+            suffix = oldName.substring(i);
+        String newName = UUID.randomUUID().toString() + suffix;
         try {
             // 文件保存
             uploadFile.transferTo(new File(folder, newName));
