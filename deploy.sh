@@ -1,3 +1,4 @@
+#!/bin/sh
 export groupId=$(mvn org.apache.maven.plugins:maven-help-plugin:evaluate -Dexpression=project.groupId -q -DforceStdout)
 export artifactId=$(mvn org.apache.maven.plugins:maven-help-plugin:evaluate -Dexpression=project.artifactId -q -DforceStdout)
 export version=$(mvn org.apache.maven.plugins:maven-help-plugin:evaluate -Dexpression=project.version -q -DforceStdout)
