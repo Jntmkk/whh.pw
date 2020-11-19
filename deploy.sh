@@ -5,7 +5,7 @@ export filename="${artifactId}"-"${groupId}"-"${version}"
 echo "filename is : " "$filename"
 h=$(ps -aux | grep -v grep | grep "${filename}" | awk '{print $2}')
 if [ -n "$h" ]; then
-  kill -9 h
+  kill -9 "$h"
   echo "stop service done"
   else
     echo "did not run service"
