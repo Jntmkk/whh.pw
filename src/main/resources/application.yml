@@ -8,3 +8,6 @@ spring:
   web:
     resources:
       static-locations: file:${web.upload-path},classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/
+  servlet:
+    multipart:
+      max-file-size: 100MB
