@@ -11,12 +11,5 @@ import javax.annotation.security.RunAs;
 
 import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
-@AutoConfigureMockMvc
-@AutoConfigureRestDocs
 class UploadControllerTest {
-    private MockMvc mvc;
-
-    @Test
-    void upload() {
-    }
 }

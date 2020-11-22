@@ -27,19 +27,4 @@ import static org.assertj.core.api.Assertions.*;
 
 @SpringBootTest
 class DemoControllerTest {
-    @MockBean
-    DemoService demoService;
-    @InjectMocks
-    DemoController demoController;
-
-    @BeforeEach
-    public void setUp() throws Exception {
-        MockitoAnnotations.openMocks(this);
-        Mockito.when(demoService.getData(Mockito.anyString())).thenReturn(Mockito.anyString());
-    }
-
-    @Test
-    void getData() {
-        assertThat(demoController.getData("admin")).isEqualTo("the data is admin");
-    }
 }
